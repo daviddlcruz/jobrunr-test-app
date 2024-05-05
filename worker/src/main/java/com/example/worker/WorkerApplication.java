@@ -8,7 +8,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import shared.LongRunnigJobRequestHandler;
 import shared.MyJobRequestHandler;
 
 import javax.sql.DataSource;
@@ -37,11 +36,6 @@ public class WorkerApplication {
 	@Bean
 	MyJobRequestHandler jobRequestHandler() {
 		return new MyJobRequestHandler();
-	}
-
-	@Bean
-	LongRunnigJobRequestHandler longRunnigJobRequestHandler() {
-		return new LongRunnigJobRequestHandler();
 	}
 
 	@Bean
